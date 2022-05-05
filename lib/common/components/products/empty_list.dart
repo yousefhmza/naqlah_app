@@ -18,7 +18,7 @@ class EmptyList extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         children: [
           Lottie.asset(
-            AppJson.emptyList,
+            AppJsonAnimations.emptyList,
             width: deviceWidth * 0.5,
             height: deviceWidth * 0.5,
           ),

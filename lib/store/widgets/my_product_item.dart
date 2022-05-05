@@ -5,6 +5,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../common/helpers/products_helper.dart';
 import '../../common/models/product_model.dart';
 import '../../common/view_model/products_view_model/products_view_model.dart';
+import '../../core/resources/assets_manager.dart';
 import '../../core/widgets/custom_icon.dart';
 import '../../core/widgets/custom_text.dart';
 import '../../core/widgets/spaces.dart';
@@ -44,23 +45,15 @@ class MyProductItem extends StatelessWidget {
             children: [
               Row(
                 children: [
-                  Container(
-                    width: deviceWidth * 0.25,
-                    height: deviceWidth * 0.25,
-                    decoration: BoxDecoration(
-                      color: AppColors.primary,
-                      borderRadius: BorderRadius.circular(AppSize.s12.r),
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(AppSize.s12.r),
+                    child: Image.asset(
+                      AppImages.authMethodBG,
+                      width: deviceWidth * 0.25,
+                      height: deviceWidth * 0.25,
+                      fit: BoxFit.cover,
                     ),
                   ),
-                  // ClipRRect(
-                  //   borderRadius: BorderRadius.circular(AppSize.s12.r),
-                  //   child: Image.network(
-                  //     product.images[0],
-                  //     width: deviceWidth * 0.2,
-                  //     height: deviceWidth * 0.2,
-                  //     fit: BoxFit.cover,
-                  //   ),
-                  // ),
                   HorizontalSpace(deviceWidth * 0.03),
                   Expanded(
                     child: Column(
@@ -75,6 +68,12 @@ class MyProductItem extends StatelessWidget {
                         ),
                         VerticalSpace(deviceWidth * 0.02),
                         CustomText(product.category, color: AppColors.grey),
+                        VerticalSpace(deviceWidth * 0.02),
+                        CustomText(
+                          "${product.pricePerUnit} EGP / ${product.priceUnit}",
+                          fontWeight: FontWeightManager.medium,
+                          color: AppColors.primary,
+                        ),
                       ],
                     ),
                   ),
@@ -84,21 +83,19 @@ class MyProductItem extends StatelessWidget {
               const Divider(),
               VerticalSpace(deviceHeight * 0.01),
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   _ProductAction(
-                    iconColor: AppColors.text,
                     text: AppStrings.edit,
                     onTap: () {},
                     icon: CustomIcons.iconly_bold_edit,
                   ),
                   Container(
                     color: AppColors.grey,
-                    width: AppSize.s1_2.w,
+                    width: AppSize.s1.w,
                     height: deviceHeight * 0.03,
                   ),
                   _ProductAction(
-                    iconColor: AppColors.error,
                     text: AppStrings.delete,
                     onTap: () {
                       Alerts.showConfirmationDialog(
@@ -110,15 +107,6 @@ class MyProductItem extends StatelessWidget {
                       );
                     },
                     icon: CustomIcons.iconly_bold_delete,
-                  ),
-                  Container(
-                    color: AppColors.grey,
-                    width: AppSize.s1_2.w,
-                    height: deviceHeight * 0.03,
-                  ),
-                  CustomText(
-                    "${product.pricePerUnit} EGP / ${product.priceUnit}",
-                    fontWeight: FontWeightManager.medium,
                   ),
                 ],
               ),
@@ -132,13 +120,11 @@ class MyProductItem extends StatelessWidget {
 }
 
 class _ProductAction extends StatelessWidget {
-  final Color iconColor;
   final IconData icon;
   final String text;
   final VoidCallback onTap;
 
   const _ProductAction({
-    required this.iconColor,
     required this.onTap,
     required this.icon,
     required this.text,
@@ -151,7 +137,7 @@ class _ProductAction extends StatelessWidget {
       onTap: onTap,
       child: Row(
         children: [
-          CustomIcon(icon, size: FontSize.s18, color: iconColor),
+          CustomIcon(icon, size: FontSize.s20),
           HorizontalSpace(deviceWidth * 0.01),
           CustomText(text),
         ],

@@ -12,7 +12,7 @@ class LoadingSpinner extends PlatformBaseWidget<Center, Center> {
 
   const LoadingSpinner({this.hasSmallRadius = true, Key? key})
       : _radius = hasSmallRadius ? AppSize.s12 : AppSize.s24,
-        _strokeWidth = hasSmallRadius ? AppSize.s2 : AppSize.s4,
+        _strokeWidth = hasSmallRadius ? AppSize.s2 : AppSize.s3,
         super(key: key);
 
   @override

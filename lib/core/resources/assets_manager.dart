@@ -1,5 +1,7 @@
 const String _imagesPath = "assets/images";
 const String _jsonPath = "assets/json";
+const String _jsonAnimationsPath = "assets/json_animations";
+const String _translationsPath = "assets/json";
 
 class AppImages {
   static const String onBoarding1 = "$_imagesPath/onBoarding1.svg";
@@ -16,5 +18,8 @@ class AppImages {
 class AppJson {
   static const String governorates = "$_jsonPath/governorates.json";
   static const String cities = "$_jsonPath/cities.json";
-  static const String emptyList = "$_jsonPath/empty.json";
+}
+
+class AppJsonAnimations {
+  static const String emptyList = "$_jsonAnimationsPath/empty.json";
 }

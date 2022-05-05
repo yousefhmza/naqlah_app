@@ -82,31 +82,36 @@ class ConfirmationDialog
               ),
             ],
           ),
-          const Divider(),
+          Padding(
+            padding: EdgeInsets.symmetric(vertical: AppPadding.p4.h),
+            child: const Divider(),
+          ),
           CustomText(description, height: AppSize.s1_5.h),
-          VerticalSpace(deviceHeight * 0.01),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: [
-              CustomButton(
-                child: const CustomText(AppStrings.cancel),
-                color: AppColors.primary,
-                isRounded: false,
-                isOutlined: true,
-                onPressed: () => Navigator.pop(context),
-              ),
-              HorizontalSpace(deviceWidth * 0.02),
-              CustomButton(
-                child: const CustomText(AppStrings.confirm),
-                color: AppColors.primary,
-                isRounded: false,
-                isOutlined: false,
-                onPressed: () {
-                  onYes();
-                  Navigator.pop(context);
-                },
-              ),
-            ],
+          Padding(
+            padding: EdgeInsets.only(top: AppPadding.p8.h),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                CustomButton(
+                  child: const CustomText(AppStrings.cancel),
+                  color: AppColors.primary,
+                  isRounded: false,
+                  isOutlined: true,
+                  onPressed: () => Navigator.pop(context),
+                ),
+                HorizontalSpace(deviceWidth * 0.02),
+                CustomButton(
+                  child: const CustomText(AppStrings.confirm),
+                  color: AppColors.primary,
+                  isRounded: false,
+                  isOutlined: false,
+                  onPressed: () {
+                    onYes();
+                    Navigator.pop(context);
+                  },
+                ),
+              ],
+            ),
           )
         ],
       ),

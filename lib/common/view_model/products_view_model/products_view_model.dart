@@ -7,7 +7,7 @@ import '../../../common/repositories/products/products_repo.dart';
 import '../../../core/resources/values_manager.dart';
 import '../../../core/utils/pickers.dart';
 import '../../../store/helpers/add_product_helper.dart';
-import '../../../store/widgets/my_products_item.dart';
+import '../../../store/widgets/my_product_item.dart';
 import '../../models/product_model.dart';
 import 'products_states.dart';
 

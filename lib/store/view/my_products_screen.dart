@@ -9,13 +9,15 @@ import '../../common/widgets/loading_list.dart';
 import '../../common/widgets/primary_appbar.dart';
 import '../../core/components/retry_component.dart';
 import '../../core/widgets/custom_text.dart';
+import '../../core/widgets/platform_widgets/loading_spinner.dart';
+import '../../core/widgets/spaces.dart';
 import '../../core/widgets/status_bar.dart';
 import '../../core/resources/color_manager.dart';
 import '../../core/resources/custom_icons.dart';
 import '../../core/resources/strings_manager.dart';
 import '../../core/resources/values_manager.dart';
 import '../../core/utils/alerts.dart';
-import '../widgets/my_products_item.dart';
+import '../widgets/my_product_item.dart';
 
 class MyProductsScreen extends StatefulWidget {
   const MyProductsScreen({Key? key}) : super(key: key);
@@ -49,7 +51,15 @@ class _MyProductsScreenState extends State<MyProductsScreen> {
             if (state is DeleteProductLoadingState) {
               Alerts.showAppDialog(
                 context,
-                const CustomText(AppStrings.deletingProduct),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    const LoadingSpinner(hasSmallRadius: false),
+                    VerticalSpace(deviceHeight * 0.015),
+                    const CustomText(AppStrings.deletingProduct),
+                  ],
+                ),
               );
             }
             if (state is DeleteProductSuccessState) {
