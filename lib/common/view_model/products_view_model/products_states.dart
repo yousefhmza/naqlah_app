@@ -1,4 +1,4 @@
-import '../../../core/network/failure.dart';
+import '../../../core/services/error/failure.dart';
 import '../../models/pagination_model.dart';
 
 abstract class ProductsStates {}

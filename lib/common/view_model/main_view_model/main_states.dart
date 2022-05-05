@@ -1,5 +1,5 @@
 import '../../../auth/models/user_model.dart';
-import '../../../core/network/failure.dart';
+import '../../../core/services/error/failure.dart';
 
 abstract class MainStates {}
 

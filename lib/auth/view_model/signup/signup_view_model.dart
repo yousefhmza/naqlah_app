@@ -4,7 +4,7 @@ import 'package:fluttertoast/fluttertoast.dart';
 import 'package:sms_autofill/sms_autofill.dart';
 
 import '../../../../core/resources/values_manager.dart';
-import '../../../core/network/error_handler.dart';
+import '../../../core/services/error/error_handler.dart';
 import '../../../core/resources/strings_manager.dart';
 import '../../../core/utils/alerts.dart';
 import '../../helpers/signup_helper.dart';

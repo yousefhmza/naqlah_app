@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../core/network/cache_factory.dart';
+import '../../core/services/cache_factory.dart';
 import '../../core/resources/strings_manager.dart';
 import '../../core/routing/routes.dart';
 import '../../core/utils/alerts.dart';

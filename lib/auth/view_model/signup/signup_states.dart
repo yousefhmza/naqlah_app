@@ -1,4 +1,4 @@
-import '../../../../core/network/failure.dart';
+import '../../../core/services/error/failure.dart';
 import '../../models/user_model.dart';
 
 abstract class SignupStates {}

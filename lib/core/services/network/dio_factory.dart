@@ -2,9 +2,9 @@ import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';
 
-import '../utils/constants.dart';
-import '../utils/storage_keys.dart';
-import 'cache_factory.dart';
+import '../../utils/constants.dart';
+import '../../utils/storage_keys.dart';
+import '../cache_factory.dart';
 
 const String _baseURL = "https://foodsupply.azurewebsites.net/v1/";
 const String _applicationJson = "application/json";

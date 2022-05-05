@@ -2,10 +2,10 @@ import 'package:dartz/dartz.dart';
 import 'package:internet_connection_checker/internet_connection_checker.dart';
 
 import '../../../auth/models/user_model.dart';
-import '../../../core/network/dio_factory.dart';
-import '../../../core/network/end_points.dart';
-import '../../../core/network/error_handler.dart';
-import '../../../core/network/failure.dart';
+import '../../../core/services/network/end_points.dart';
+import '../../../core/services/error/error_handler.dart';
+import '../../../core/services/error/failure.dart';
+import '../../../core/services/network/dio_factory.dart';
 import 'main_repo_interface.dart';
 
 class MainRepository implements MainRepoInterface {

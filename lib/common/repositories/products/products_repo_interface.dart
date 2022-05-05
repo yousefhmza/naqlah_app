@@ -2,7 +2,7 @@ import 'dart:io';
 
 import 'package:dartz/dartz.dart';
 
-import '../../../core/network/failure.dart';
+import '../../../core/services/error/failure.dart';
 import '../../models/pagination_model.dart';
 import '../../models/product_model.dart';
 

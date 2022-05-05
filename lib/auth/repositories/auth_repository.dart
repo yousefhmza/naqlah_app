@@ -2,13 +2,13 @@ import 'package:dartz/dartz.dart';
 import 'package:flutter/material.dart';
 import 'package:internet_connection_checker/internet_connection_checker.dart';
 
+import '../../core/services/network/end_points.dart';
 import '../../core/services/dependency_inj.dart';
-import '../../core/network/cache_factory.dart';
-import '../../core/network/dio_factory.dart';
-import '../../core/network/end_points.dart';
-import '../../core/network/error_handler.dart';
-import '../../core/network/failure.dart';
+import '../../core/services/cache_factory.dart';
+import '../../core/services/error/error_handler.dart';
 import '../../core/routing/routes.dart';
+import '../../core/services/error/failure.dart';
+import '../../core/services/network/dio_factory.dart';
 import '../../core/utils/storage_keys.dart';
 import '../models/user_model.dart';
 import 'auth_repo_interface.dart';

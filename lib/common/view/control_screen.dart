@@ -14,7 +14,7 @@ import '../../customer/view/customer_home_screen.dart';
 import '../../core/components/retry_component.dart';
 import '../../core/widgets/platform_widgets/loading_spinner.dart';
 import '../../core/widgets/status_bar.dart';
-import '../../core/network/error_handler.dart';
+import '../../core/services/error/error_handler.dart';
 import '../../core/resources/values_manager.dart';
 import '../../store/view/store_home_screen.dart';
 import '../view_model/main_view_model/main_states.dart';

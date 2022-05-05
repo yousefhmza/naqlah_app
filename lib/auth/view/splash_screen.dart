@@ -6,7 +6,7 @@ import '../../core/resources/assets_manager.dart';
 import '../../core/utils/storage_keys.dart';
 import '../../core/widgets/status_bar.dart';
 import '../../core/components/naqlah_logo.dart';
-import '../../core/network/cache_factory.dart';
+import '../../core/services/cache_factory.dart';
 import '../../core/resources/values_manager.dart';
 import '../../core/routing/routes.dart';
 
